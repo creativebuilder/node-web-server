@@ -34,9 +34,9 @@ app.use((req, res, next) => {
 });
 
 //middleware to render a maintenance page
-app.use((req, res, next) => {
-  res.render("maintenance.hbs");
-});
+// app.use((req, res, next) => {
+//   res.render("maintenance.hbs");
+// });
 
 //this middleware allows you to load static html files easily
 app.use(express.static(__dirname + "/public"));
@@ -65,6 +65,12 @@ app.get("/about", (req, res) => {
 app.get("/bad", (req, res) => {
   res.send({
     errorMessage: "Unable to handle the request"
+  });
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    projectName: "My first project"
   });
 });
 
