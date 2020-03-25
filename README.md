@@ -1,0 +1,1 @@
+This is a sample Node JS project just for fun purposes.
